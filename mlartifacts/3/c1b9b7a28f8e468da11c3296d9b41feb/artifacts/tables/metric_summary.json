@@ -1,0 +1,1 @@
+{"columns":["speech_type","eer_mean","eer_std","roc_auc_mean","roc_auc_std","tar_at_1pct_far_mean","tar_at_1pct_far_std"],"data":[["free_speech",0.0507283414,0.017011683,0.9800961082,0.0110355228,0.9314784053,0.026977835],["pangrams",0.0264023767,0.0122047361,0.9969093407,0.0020416793,0.9613787375,0.0202219195]]}

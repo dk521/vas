@@ -1,0 +1,22 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+db.sqlite3
+
+backend/media/
+backend/ml_models/
+backend/db.sqlite3
+backend/staticfiles/
+
+frontend/node_modules/
+frontend/dist/
+
+# Downloaded participant recordings and local analysis outputs.
+research_data/
+
+# Local MLflow databases and artifacts.
+mlflow.db
+mlflow/learning/mlflow.db
+mlflow/learning/mlartifacts/

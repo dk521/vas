@@ -1,0 +1,1 @@
+{"columns":["speech_type","outcome","pearson_correlation","sample_count"],"data":[["free_speech","genuine_score",0.5094931822,140],["free_speech","max_impostor_score",-0.1031883122,140],["free_speech","score_margin",0.5194342018,140],["pangrams","genuine_score",0.1092947221,140],["pangrams","max_impostor_score",0.0405274062,140],["pangrams","score_margin",0.0718432648,140]]}

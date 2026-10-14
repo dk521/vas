@@ -1,0 +1,32 @@
+services:
+  backend:
+    build: ./backend
+    command: >
+      sh -c "python manage.py migrate && python manage.py seed_pangrams &&
+      python manage.py runserver 0.0.0.0:8000"
+    environment:
+      DEBUG: "True"
+      DJANGO_SECRET_KEY: local-development-only-change-me
+      DB_ENGINE: sqlite
+      USE_S3: "False"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+
+  frontend:
+    image: node:22-alpine
+    working_dir: /app
+    command: sh -c "npm ci && npm run dev -- --host 0.0.0.0"
+    environment:
+      VITE_API_PROXY_TARGET: http://backend:8000
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - frontend_node_modules:/app/node_modules
+
+volumes:
+  frontend_node_modules:
